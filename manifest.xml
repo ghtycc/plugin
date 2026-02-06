@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JsPlugin>
+  <ApiVersion>1.0.0</ApiVersion>
+  <Name>BBT</Name>
+  <Dwscription>棒棒糖表格插件</Dwscription>
+  <Functions>
+    <Uri>/functions.json</Uri>
+    <Namespace>BBT</Namespace>
+  </Functions>
+</JsPlugin>

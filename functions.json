@@ -1,0 +1,471 @@
+{
+  "functions": [
+    {
+      "name": "customSum",
+      "parameters": [
+        {
+          "name": "ranges",
+          "description": "要求和的值",
+          "type": "number[][]"
+        }
+      ],
+      "description": "自定义求和函数",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "CN2NUM",
+      "parameters": [
+        {
+          "name": "chineseNumber",
+          "description": "中文数字",
+          "type": "string"
+        }
+      ],
+      "description": "中文数字转阿拉伯数字",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "EXTRACT_NUMBERS",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "文本",
+          "type": "string"
+        },
+        {
+          "name": "asArray",
+          "description": "是否返回数组",
+          "type": "boolean?"
+        }
+      ],
+      "description": "提取字符串中的数字",
+      "result": {
+        "type": "any"
+      }
+    },
+    {
+      "name": "CHINESE_SEGMENT",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "中文文本",
+          "type": "string"
+        },
+        {
+          "name": "separator",
+          "description": "分隔符",
+          "type": "string?"
+        }
+      ],
+      "description": "智能中文分词（简单版）",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "GET_PINYIN_INITIALS",
+      "parameters": [
+        {
+          "name": "chinese",
+          "description": "中文字符串",
+          "type": "string"
+        },
+        {
+          "name": "uppercase",
+          "description": "是否大写",
+          "type": "boolean?"
+        }
+      ],
+      "description": "生成拼音首字母",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "EXTRACT_ID_CARD_INFO",
+      "parameters": [
+        {
+          "name": "idCard",
+          "description": "身份证号码",
+          "type": "string"
+        },
+        {
+          "name": "infoType",
+          "description": "信息类型: birth/gender/age/verify/all",
+          "type": "string?"
+        }
+      ],
+      "description": "提取身份证号信息",
+      "result": {
+        "type": "any"
+      }
+    },
+    {
+      "name": "RANDOM_CHINESE",
+      "parameters": [
+        {
+          "name": "length",
+          "description": "生成的长度",
+          "type": "number?"
+        },
+        {
+          "name": "type",
+          "description": "类型: common/all/name/poem",
+          "type": "string?"
+        }
+      ],
+      "description": "生成随机中文字符",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "REMOVE_DUPLICATE_CHARS",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "原始文本",
+          "type": "string"
+        },
+        {
+          "name": "keepFirst",
+          "description": "是否保留第一个出现的字符",
+          "type": "boolean?"
+        }
+      ],
+      "description": "去除重复字符",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "SMART_REPLACE",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "原始文本",
+          "type": "string"
+        },
+        {
+          "name": "pattern",
+          "description": "查找模式",
+          "type": "string"
+        },
+        {
+          "name": "replacement",
+          "description": "替换文本",
+          "type": "string"
+        },
+        {
+          "name": "useRegex",
+          "description": "是否使用正则表达式",
+          "type": "boolean?"
+        },
+        {
+          "name": "caseSensitive",
+          "description": "是否区分大小写",
+          "type": "boolean?"
+        }
+      ],
+      "description": "智能文本替换（支持正则表达式）",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "TEXT_SIMILARITY",
+      "parameters": [
+        {
+          "name": "text1",
+          "description": "文本1",
+          "type": "string"
+        },
+        {
+          "name": "text2",
+          "description": "文本2",
+          "type": "string"
+        },
+        {
+          "name": "method",
+          "description": "方法: jaccard/levenshtein/cosine",
+          "type": "string?"
+        }
+      ],
+      "description": "计算文本相似度（简单版）",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "EXTRACT_URL_PARAMS",
+      "parameters": [
+        {
+          "name": "url",
+          "description": "URL地址",
+          "type": "string"
+        },
+        {
+          "name": "paramName",
+          "description": "参数名（不指定则返回所有参数）",
+          "type": "string?"
+        }
+      ],
+      "description": "提取URL参数",
+      "result": {
+        "type": "any"
+      }
+    },
+    {
+      "name": "TEXT_SUMMARY",
+      "parameters": [
+        {
+          "name": "text",
+          "description": "原始文本",
+          "type": "string"
+        },
+        {
+          "name": "maxLength",
+          "description": "最大长度",
+          "type": "number?"
+        },
+        {
+          "name": "addEllipsis",
+          "description": "是否添加省略号",
+          "type": "boolean?"
+        }
+      ],
+      "description": "生成文本摘要",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "WORKDAYS",
+      "parameters": [
+        {
+          "name": "startDate",
+          "description": "开始日期",
+          "type": "string"
+        },
+        {
+          "name": "endDate",
+          "description": "结束日期",
+          "type": "string"
+        },
+        {
+          "name": "holidays",
+          "description": "节假日列表（可选）",
+          "type": "string[][]?"
+        }
+      ],
+      "description": "计算两个日期之间的工作日数（排除周末）",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "LUNAR_DATE",
+      "parameters": [
+        {
+          "name": "gregorianDate",
+          "description": "公历日期",
+          "type": "string"
+        },
+        {
+          "name": "withFestival",
+          "description": "是否包含节日信息",
+          "type": "boolean?"
+        }
+      ],
+      "description": "中国农历日期转换（简单版）",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "QUARTER_END",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "日期",
+          "type": "string"
+        }
+      ],
+      "description": "计算日期所在季度的最后一天",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "AGE",
+      "parameters": [
+        {
+          "name": "birthDate",
+          "description": "出生日期",
+          "type": "string"
+        },
+        {
+          "name": "asOfDate",
+          "description": "截止日期，默认今天",
+          "type": "string?"
+        }
+      ],
+      "description": "计算年龄（精确到天）",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "NEXT_WORKDAY",
+      "parameters": [
+        {
+          "name": "startDate",
+          "description": "起始日期",
+          "type": "string"
+        },
+        {
+          "name": "days",
+          "description": "要前进的工作日数",
+          "type": "number?"
+        },
+        {
+          "name": "holidays",
+          "description": "节假日列表",
+          "type": "string[][]?"
+        }
+      ],
+      "description": "计算下一个工作日",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "IS_CHINA_HOLIDAY",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "要检查的日期",
+          "type": "string"
+        },
+        {
+          "name": "year",
+          "description": "指定年份，默认当前年份",
+          "type": "number?"
+        }
+      ],
+      "description": "判断日期是否是中国的法定节假日",
+      "result": {
+        "type": "boolean"
+      }
+    },
+    {
+      "name": "WEEK_OF_YEAR",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "日期",
+          "type": "string"
+        },
+        {
+          "name": "startDay",
+          "description": "每周开始日（1=周一，0=周日）",
+          "type": "number?"
+        }
+      ],
+      "description": "计算日期是当年的第几周",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "ADD_WORKDAYS",
+      "parameters": [
+        {
+          "name": "startDate",
+          "description": "开始日期",
+          "type": "string"
+        },
+        {
+          "name": "workDays",
+          "description": "要添加的工作日数",
+          "type": "number"
+        },
+        {
+          "name": "holidays",
+          "description": "节假日列表",
+          "type": "string[][]?"
+        }
+      ],
+      "description": "添加工作日到日期",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "MONTH_DIFF",
+      "parameters": [
+        {
+          "name": "startDate",
+          "description": "开始日期",
+          "type": "string"
+        },
+        {
+          "name": "endDate",
+          "description": "结束日期",
+          "type": "string"
+        },
+        {
+          "name": "roundUp",
+          "description": "是否向上取整",
+          "type": "boolean?"
+        }
+      ],
+      "description": "计算两个日期之间的月份差",
+      "result": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "CHINESE_WEEKDAY",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "日期",
+          "type": "string"
+        },
+        {
+          "name": "simple",
+          "description": "是否简写",
+          "type": "boolean?"
+        }
+      ],
+      "description": "获取日期的中文星期",
+      "result": {
+        "type": "string"
+      }
+    },
+    {
+      "name": "IS_WEEKEND",
+      "parameters": [
+        {
+          "name": "date",
+          "description": "日期",
+          "type": "string"
+        },
+        {
+          "name": "includeSunday",
+          "description": "是否包含周日",
+          "type": "boolean?"
+        }
+      ],
+      "description": "判断日期是否是周末",
+      "result": {
+        "type": "boolean"
+      }
+    }
+  ]
+}
